@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { Mail, Instagram, Linkedin } from 'lucide-react';
 
 const SplashScreen = lazy(() => import('./components/SplashScreen').then(m => ({ default: m.SplashScreen })));
+const VideoThumbnail = lazy(() => import('./components/VideoThumbnail').then(m => ({ default: m.VideoThumbnail })));
 
 let gsap: typeof import('gsap').gsap;
 let ScrollTrigger: typeof import('gsap/ScrollTrigger').ScrollTrigger;
@@ -329,7 +330,7 @@ useEffect(() => {
             </h3>
             <div className="max-w-4xl mx-auto">
               <Suspense fallback={<div className="aspect-video rounded-xl bg-gray-800 animate-pulse" />}>
-              
+                <VideoThumbnail
                   src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                   title="SHOW REEL"
                   isShowreel={true}

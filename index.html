@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aamir Naqvi</title>
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="/pc/bg.webp" media="(min-width: 768px)">
+    <link rel="preload" as="image" href="/mobile/mobile bg.webp" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="/pc/me.webp" media="(min-width: 768px)">
+    <link rel="preload" as="image" href="/mobile/mbme.webp" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="/pc/name.png" media="(min-width: 768px)">
+    <link rel="preload" as="image" href="/mobile/mbname.png" media="(max-width: 767px)">
+
+    <!-- Preload only critical thumbnails -->
+    <link rel="preload" as="image" href="/thumbnails/1.jpg">
+    <link rel="preload" as="image" href="/thumbnails/2.jpg">
+    <link rel="preload" as="image" href="/thumbnails/3.jpg">
+
+    <!-- Critical CSS inline -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body, #root {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx" defer></script>
+  </body>
+</html>
